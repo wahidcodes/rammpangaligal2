@@ -1,4 +1,4 @@
 backend
 dataCollection/.env
 backend.bat
-db.sqlite3
+#db.sqlite3
