@@ -1,0 +1,4 @@
+backend
+dataCollection/.env
+backend.bat
+db.sqlite3
