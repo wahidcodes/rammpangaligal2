@@ -1,11 +1,23 @@
-schemaVersion: "1.2"
-endpoints:
-    - name: rest-api-be2
-      displayName: REST API
-      service:
-        basePath: /
+version: 0.1
+
+components:
+  - name: drf-service
+    type: service
+    source:
+      type: git
+      url: "https://github.com/wahidcodes/rammpangaligal2.git"
+      branch: main
+    build:
+      type: python
+      runtime: "python:3.11"
+      entrypoint: "gunicorn myproject.wsgi:application --bind 0.0.0.0:8000"
+    endpoints:
+      - name: drf-api
         port: 8000
-      type: REST
-      networkVisibilities:
-        - Project
-        - Public
+        type: REST
+        networkVisibility: Public
+    env:
+      - name: DJANGO_SETTINGS_MODULE
+        value: "dataCollection.settings"
+      - name: DEBUG
+        value: "True"
