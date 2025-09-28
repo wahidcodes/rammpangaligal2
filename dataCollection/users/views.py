@@ -11,6 +11,10 @@ from .models import ExtraInfo
 # Create your views here.
 from django.contrib.auth import get_user_model
 
+class HelloView(APIView):
+    def get(self, request):
+        return Response({"message": "Hello Choreo!"})
+
 
 class UserView(generics.CreateAPIView):
     queryset = User.objects.all()

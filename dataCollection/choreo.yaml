@@ -10,7 +10,7 @@ components:
     build:
       type: python
       runtime: "python:3.11"
-      entrypoint: "bash -c 'python manage.py migrate && gunicorn dataCollection.wsgi:application --bind 0.0.0.0:${PORT}'"
+      entrypoint: "bash -c 'python manage.py migrate && gunicorn dataCollection.wsgi:application --bind 0.0.0.0:$PORT'"
     endpoints:
       - name: drf-api
         port: 0
