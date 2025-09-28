@@ -1,3 +1,4 @@
 dataCollection/backend
 frontend/node_modules
+frontend/dist
 dataCollection/.env

@@ -4,7 +4,6 @@ import {useEffect, useState} from 'react';
 import api from '../utils/api.js';
 import {ACCESS_TOKEN, REFRESH_TOKEN} from '../utils/constants';
 import { jwtDecode } from 'jwt-decode';
-import Login from './Login.tsx';
 import { Navigate } from 'react-router-dom';
 
 type StrictCompProps = { children: string }
